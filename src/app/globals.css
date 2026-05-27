@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111111;
+  color: #9e9e9e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #111111;
+  color: #9e9e9e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(166, 139, 71, 0.25);
+  color: #fff;
+}
+
+body {
+  margin: 0;
+}
+
+.section-heading {
+  letter-spacing: 0.2em;
+}
+
+.hero-overlay {
+  background: linear-gradient(rgba(17, 17, 17, 0.72), rgba(17, 17, 17, 0.95));
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(17, 17, 17, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+  }
+}
