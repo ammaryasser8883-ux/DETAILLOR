@@ -1,38 +1,97 @@
-import { motion } from 'framer-motion';
+"use client";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="border-t border-gunmetal bg-charcoal py-24">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="rounded-[2rem] border border-gunmetal bg-[#121212] p-10 text-center shadow-glow"
-        >
-          <p className="text-sm uppercase tracking-[0.32em] text-frost/70">Start your next collection</p>
-          <h2 className="mt-6 text-4xl font-serif uppercase tracking-[0.12em] text-alabaster sm:text-5xl">
-            Request samples and design direction.
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-frost/85 sm:text-lg">
-            Connect with the DETAILLOR studio for precision engineering, material consultation, and premium production support.
-          </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href="mailto:hello@detaillor.com"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm uppercase tracking-[0.18em] text-black transition hover:bg-[#cfb868]"
-            >
-              Email the studio
-            </a>
-            <a
-              href="mailto:hello@detaillor.com"
-              className="inline-flex items-center justify-center rounded-full border border-gunmetal bg-transparent px-8 py-4 text-sm uppercase tracking-[0.18em] text-alabaster transition hover:border-primary hover:text-primary"
+    <section id="request" className="border-t border-gunmetal bg-charcoal py-24">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="space-y-8">
+            <div className="space-y-5">
+              <p className="text-sm uppercase tracking-[0.32em] text-frost/80">Request Samples</p>
+              <h2 className="text-4xl font-serif uppercase tracking-[0.12em] text-alabaster sm:text-5xl">
+                Inquire about our premium materials and engineered accessories for your brand.
+              </h2>
+              <p className="max-w-2xl text-base leading-8 text-frost/85 sm:text-lg">
+                Share your design direction and receive a tailored production approach from the DETAILLOR studio.
+              </p>
+            </div>
+          </div>
+
+          <form className="space-y-6 rounded-[2rem] border border-gunmetal bg-[#121212] p-8 shadow-glow">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block text-sm uppercase tracking-[0.18em] text-frost/70">
+                <span className="mb-2 block">Brand Name</span>
+                <input
+                  type="text"
+                  placeholder="Enter your brand name"
+                  className="w-full rounded-2xl border border-gunmetal bg-[#101010] px-4 py-3 text-sm text-alabaster outline-none transition focus:border-primary"
+                />
+              </label>
+              <label className="block text-sm uppercase tracking-[0.18em] text-frost/70">
+                <span className="mb-2 block">Contact Information</span>
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  className="w-full rounded-2xl border border-gunmetal bg-[#101010] px-4 py-3 text-sm text-alabaster outline-none transition focus:border-primary"
+                />
+              </label>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block text-sm uppercase tracking-[0.18em] text-frost/70">
+                <span className="mb-2 block">Product Type</span>
+                <input
+                  type="text"
+                  placeholder="e.g. Matte Resin Buttons"
+                  className="w-full rounded-2xl border border-gunmetal bg-[#101010] px-4 py-3 text-sm text-alabaster outline-none transition focus:border-primary"
+                />
+              </label>
+              <label className="block text-sm uppercase tracking-[0.18em] text-frost/70">
+                <span className="mb-2 block">Finish Type</span>
+                <input
+                  type="text"
+                  placeholder="e.g. Laser Engraved"
+                  className="w-full rounded-2xl border border-gunmetal bg-[#101010] px-4 py-3 text-sm text-alabaster outline-none transition focus:border-primary"
+                />
+              </label>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block text-sm uppercase tracking-[0.18em] text-frost/70">
+                <span className="mb-2 block">MOQ</span>
+                <input
+                  type="text"
+                  placeholder="Estimated quantity"
+                  className="w-full rounded-2xl border border-gunmetal bg-[#101010] px-4 py-3 text-sm text-alabaster outline-none transition focus:border-primary"
+                />
+              </label>
+              <label className="block text-sm uppercase tracking-[0.18em] text-frost/70">
+                <span className="mb-2 block">Country</span>
+                <input
+                  type="text"
+                  placeholder="Location"
+                  className="w-full rounded-2xl border border-gunmetal bg-[#101010] px-4 py-3 text-sm text-alabaster outline-none transition focus:border-primary"
+                />
+              </label>
+            </div>
+
+            <label className="block text-sm uppercase tracking-[0.18em] text-frost/70">
+              <span className="mb-2 block">Reference Upload (URL)</span>
+              <input
+                type="url"
+                placeholder="Link to references or tech packs"
+                className="w-full rounded-2xl border border-gunmetal bg-[#101010] px-4 py-3 text-sm text-alabaster outline-none transition focus:border-primary"
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="inline-flex w-full items-center justify-center rounded-full bg-primary px-8 py-4 text-sm uppercase tracking-[0.18em] text-black transition hover:bg-[#cfb868]"
             >
               Request Samples
-            </a>
-          </div>
-        </motion.div>
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

@@ -10,6 +10,12 @@ export interface Finish {
   accent: string;
 }
 
+export interface ProcessStep {
+  id: string;
+  title: string;
+  description: string;
+}
+
 export interface Product {
   id: string;
   name: string;

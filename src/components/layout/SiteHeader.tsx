@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import Link from 'next/link';
-import { navItems } from '@/data/site';
 
 export function SiteHeader() {
   return (
@@ -10,24 +8,9 @@ export function SiteHeader() {
           DETAILLOR<span className="text-primary">.</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={clsx(
-                'text-[0.78rem] uppercase tracking-[0.18em] transition',
-                'text-frost hover:text-white'
-              )}
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
         <a
-          href="#contact"
-          className="hidden rounded-full border border-gunmetal bg-charcoal px-6 py-3 text-[0.78rem] uppercase tracking-[0.18em] text-alabaster transition hover:border-primary hover:text-primary md:inline-flex"
+          href="#request"
+          className="rounded-full border border-gunmetal bg-charcoal px-5 py-3 text-[0.78rem] uppercase tracking-[0.18em] text-alabaster transition hover:border-primary hover:text-primary"
         >
           Request Samples
         </a>

@@ -1,3 +1,7 @@
+"use client";
+
+"use client";
+
 import { motion } from 'framer-motion';
 
 export function BrandPhilosophy() {
@@ -11,12 +15,12 @@ export function BrandPhilosophy() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="text-center"
         >
-          <p className="text-sm uppercase tracking-[0.32em] text-frost/80">Tailored Solutions</p>
+          <p className="text-sm uppercase tracking-[0.32em] text-frost/80">About Detaillor</p>
           <h2 className="mt-6 text-4xl font-serif uppercase tracking-[0.12em] text-alabaster sm:text-5xl">
             Detaillor develops premium garment identity systems for modern fashion brands.
           </h2>
           <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-frost/85 sm:text-lg">
-            We combine refined materials, engineered finishes, and cinematic product storytelling for brands that value tactility, precision, and elevated presentation.
+            Tailored Solutions
           </p>
         </motion.div>
       </div>
