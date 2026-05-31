@@ -4,36 +4,51 @@ import { supabase } from "@/lib/supabase";
 /**
  * Upload multiple files to Supabase Storage
  *
+ * Performance Improvement:
+ * ------------------------
+ * Upload all files in parallel instead of
+ * uploading them one-by-one.
+ *
+ * This significantly reduces total upload time.
+ *
  * @param files Selected files from the form
  * @returns Array of uploaded file paths
  */
 export async function uploadFiles(
   files: FileList
 ): Promise<string[]> {
-  // Store uploaded file paths
-  const uploadedPaths: string[] = [];
 
-  // Loop through selected files
-  for (const file of Array.from(files)) {
-    // Create unique filename
-    const filePath =
-      `${Date.now()}-${Math.random()}-${file.name}`;
+  // Convert FileList into a normal array
+  const fileArray = Array.from(files);
 
-    // Upload file to storage bucket
-    const { error } =
-      await supabase.storage
-        .from("reference-files")
-        .upload(filePath, file);
+  // Create one upload promise per file
+  const uploadPromises = fileArray.map(
+    async (file) => {
 
-    // Stop if upload failed
-    if (error) {
-      throw error;
+      // Generate unique file name
+      const filePath =
+        `${Date.now()}-${Math.random()}-${file.name}`;
+
+      // Upload file to Supabase Storage
+      const { error } =
+        await supabase.storage
+          .from("reference-files")
+          .upload(filePath, file);
+
+      // Stop if upload failed
+      if (error) {
+        throw error;
+      }
+
+      // Return uploaded path
+      return filePath;
     }
+  );
 
-    // Save path for later use
-    uploadedPaths.push(filePath);
-  }
+  // Execute all uploads simultaneously
+  const uploadedPaths =
+    await Promise.all(uploadPromises);
 
-  // Return uploaded paths
+  // Return uploaded file paths
   return uploadedPaths;
 }

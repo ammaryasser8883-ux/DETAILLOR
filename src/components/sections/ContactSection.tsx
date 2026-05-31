@@ -404,7 +404,7 @@ export function ContactSection() {
               className="inline-flex w-full items-center justify-center rounded-full bg-primary px-8 py-4 text-sm uppercase tracking-[0.18em] text-black transition hover:bg-[#cfb868] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSubmitting
-                ? "Submitting..."
+                ? "Uploading reference files..."
                 : "Request Samples"}
             </button>
 
