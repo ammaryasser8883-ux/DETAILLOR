@@ -32,7 +32,7 @@ export const assets = {
     background: '/images/packaging/packaging-background.png',
   },
   categories: {
-    zippers: '/images/zippers/zippers.png',
+    zippers: '/images/zippers/Zippers.png',
     hangTags: '/images/hang-tags/hang-tags-background.png',
     packaging: '/images/packaging/packaging-background.png',
     wovenLabels: '/images/woven-labels/woven-labels-background.png',
