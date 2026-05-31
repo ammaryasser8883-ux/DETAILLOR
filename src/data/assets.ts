@@ -22,6 +22,9 @@ export const assets = {
   zippers: {
     background: '/images/zippers/zippers.png',
   },
+  wovenLabels: {
+    background : '/images/woven-labels/woven-labels-background.png',
+  },
   hangTags: {
     background: '/images/hang-tags/hang-tags-background.png',
   },
