@@ -2,7 +2,8 @@
 
 "use client";
 
-import Image from 'next/image';
+import { AssetImage } from '@/components/ui/AssetImage';
+import { assets } from '@/data/assets';
 import { materials } from '@/data/products';
 import { motion } from 'framer-motion';
 
@@ -47,12 +48,13 @@ export function ButtonsShowcase() {
               className="overflow-hidden rounded-[2rem] border border-gunmetal bg-[#141414]"
             >
               <div className="relative h-72 w-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1974&auto=format&fit=crop"
+                <AssetImage
+                  src={assets.buttons.showcase1}
                   alt="Horn Effect Resin Material"
                   fill
                   className="object-cover transition duration-700 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  debugLabel="buttons-showcase-1"
                 />
               </div>
             </motion.div>
@@ -64,12 +66,13 @@ export function ButtonsShowcase() {
               className="overflow-hidden rounded-[2rem] border border-gunmetal bg-[#141414]"
             >
               <div className="relative h-72 w-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1970&auto=format&fit=crop"
+                <AssetImage
+                  src={assets.buttons.showcase2}
                   alt="Matte Soft Touch Resin Material"
                   fill
                   className="object-cover transition duration-700 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  debugLabel="buttons-showcase-2"
                 />
               </div>
             </motion.div>

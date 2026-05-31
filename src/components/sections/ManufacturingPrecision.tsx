@@ -1,6 +1,6 @@
 "use client";
 
-import Image from 'next/image';
+import { AssetImage } from '@/components/ui/AssetImage';
 import { motion } from 'framer-motion';
 import { manufacturingImages } from '@/data/products';
 
@@ -26,12 +26,13 @@ export function ManufacturingPrecision() {
               className="overflow-hidden rounded-[2rem] border border-gunmetal bg-[#141414]"
             >
               <div className="relative h-96 w-full">
-                <Image
+                <AssetImage
                   src={item.image}
                   alt={item.alt}
                   fill
                   className="object-cover transition duration-700 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  debugLabel={`manufacturing-${item.id}`}
                 />
               </div>
             </motion.div>

@@ -4,17 +4,23 @@
 
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { AssetImage } from '@/components/ui/AssetImage';
+import { assets } from '@/data/assets';
 
 export function HeroSection() {
   return (
     <section id="hero" className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-ink pt-[80px]">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1974&auto=format&fit=crop')",
-        }}
-      />
+      <div className="absolute inset-0">
+        <AssetImage
+          src={assets.hero.main}
+          alt="DETAILLOR hero background"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+          debugLabel="hero-background"
+        />
+      </div>
       <div className="absolute inset-0 hero-overlay"></div>
 
       <div className="relative mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl items-center px-6 py-24 sm:px-8 lg:px-10">

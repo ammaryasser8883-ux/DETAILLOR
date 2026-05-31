@@ -1,32 +1,33 @@
 import type { Category, Material, Product, ProcessStep } from '@/lib/types';
+import { assets } from '@/data/assets';
 
 export const categories: Category[] = [
   {
     id: 'zippers',
     title: 'Zippers',
     description: 'Premium fastening systems in development.',
-    image: 'https://images.unsplash.com/photo-1518761845366-82b2effde8e8?q=80&w=1974&auto=format&fit=crop',
+    image: assets.categories?.zippers ?? '',
     tag: 'Coming Soon',
   },
   {
     id: 'hang-tags',
     title: 'Hang Tags',
     description: 'Luxury brand identity elements coming soon.',
-    image: 'https://images.unsplash.com/photo-1512438501559-4def71586bed?q=80&w=1974&auto=format&fit=crop',
+    image: assets.categories?.hangTags ?? '',
     tag: 'Coming Soon',
   },
   {
     id: 'packaging',
     title: 'Packaging',
     description: 'Premium garment presentation systems coming soon.',
-    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1974&auto=format&fit=crop',
+    image: assets.categories?.packaging ?? '',
     tag: 'Coming Soon',
   },
   {
     id: 'woven-labels',
     title: 'Woven Labels',
     description: 'Identity woven systems coming soon.',
-    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1974&auto=format&fit=crop',
+    image: assets.wovenLabels?.background ?? '',
     tag: 'Coming Soon',
   },
 ];
@@ -38,7 +39,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'Engineered for exact precision with a tactile refinement, communicating classic timelessness and superior quality on dark fashion fabrics.',
-    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1974&auto=format&fit=crop',
+    image: assets.buttons.premiumResin,
     highlights: ['Refined matte finishes', 'Precision molded detail', 'Custom tonal palettes'],
   },
   {
@@ -47,7 +48,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'A non-reflective, smooth surface engineered for modern minimalist garments requiring subtle luxury and an authentic matte finish.',
-    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1970&auto=format&fit=crop',
+    image: assets.buttons.matteSoftTouch,
     highlights: ['Soft matte feel', 'Minimal reflection', 'Modern luxury surface'],
   },
   {
@@ -56,7 +57,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'Classic organic striations replicated with absolute industrial consistency and authoritative presence for premium garment applications.',
-    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1974&auto=format&fit=crop',
+    image: assets.buttons.hornEffectResin,
     highlights: ['Organic texture', 'Structured depth', 'Premium surface detail'],
   },
   {
@@ -65,7 +66,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'Luxurious stone-like textures featuring unique veining patterns that elevate bespoke product identity with ultra realistic detail.',
-    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1974&auto=format&fit=crop',
+    image: assets.buttons.marbleEffectResin,
     highlights: ['Veined marble finish', 'Bespoke luxury look', 'Textural precision'],
   },
   {
@@ -74,7 +75,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'Precise laser-etched branding and engraved details executed with uncompromising industrial precision.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1974&auto=format&fit=crop',
+    image: assets.buttons.customEngraved,
     highlights: ['Laser engraving', 'Brand personalization', 'Exacting finish'],
   },
   {
@@ -83,7 +84,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'The weightless durability of premium resin combined with an authentic, meticulously crafted metallic finish.',
-    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1970&auto=format&fit=crop',
+    image: assets.buttons.metalLookResin,
     highlights: ['Metallic luster', 'Lightweight resin', 'Engineered durability'],
   },
   {
@@ -92,7 +93,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'Translucent matte finishes that diffuse light, offering a subtle, contemporary aesthetic for avant-garde designs and engineered garments.',
-    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1974&auto=format&fit=crop',
+    image: assets.buttons.frostedResin,
     highlights: ['Subtle translucency', 'Diffused light plays', 'Contemporary luxury'],
   },
   {
@@ -101,7 +102,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'Seamless face designs featuring robust, engineered hidden attachment points for a flawless exterior and superior structural integrity.',
-    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1974&auto=format&fit=crop',
+    image: assets.buttons.shankButtons,
     highlights: ['Hidden attachment', 'Flawless exterior', 'Structural reliability'],
   },
   {
@@ -110,7 +111,7 @@ export const productHighlights: Product[] = [
     category: 'Buttons',
     description:
       'Statement proportions engineered with structural integrity, designed to anchor bold outerwear silhouettes in premium collections.',
-    image: 'https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1974&auto=format&fit=crop',
+    image: assets.buttons.oversizedFashion,
     highlights: ['Statement scale', 'Bold luxury attitude', 'Engineered integrity'],
   },
 ];
@@ -138,13 +139,13 @@ export const manufacturingImages = [
   {
     id: 'precision-edge',
     title: 'Precision Edge Finishing',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1974&auto=format&fit=crop',
+    image: assets.manufacturing.precisionEdge,
     alt: 'Precision edge finishing detail',
   },
   {
     id: 'engineered-mold',
     title: 'Engineered Metal Mold',
-    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1974&auto=format&fit=crop',
+    image: assets.manufacturing.engineeredMold,
     alt: 'Engineered metal mold close-up',
   },
 ];

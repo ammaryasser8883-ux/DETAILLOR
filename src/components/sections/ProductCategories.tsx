@@ -1,8 +1,6 @@
 "use client";
 
-"use client";
-
-import Image from 'next/image';
+import { AssetImage } from '@/components/ui/AssetImage';
 import { productHighlights } from '@/data/products';
 import { motion } from 'framer-motion';
 
@@ -31,12 +29,13 @@ export function ProductCategories() {
               className="group overflow-hidden rounded-[2rem] border border-gunmetal bg-[#141414] shadow-glow"
             >
               <div className="relative h-72 overflow-hidden bg-[#0f0f0f]">
-                <Image
+                <AssetImage
                   src={product.image}
                   alt={product.name}
                   fill
                   className="object-cover transition duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  debugLabel={`product-${product.id}`}
                 />
               </div>
               <div className="p-8">
