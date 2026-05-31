@@ -1,16 +1,32 @@
 "use client";
 
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { AssetImage } from '@/components/ui/AssetImage';
-import { assets } from '@/data/assets';
+// Arrow icon
+import { ArrowRight } from "lucide-react";
+
+// Animation library
+import { motion } from "framer-motion";
+
+// Asset image component
+import { AssetImage } from "@/components/ui/AssetImage";
+
+// Assets data
+import { assets } from "@/data/assets";
 
 export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-ink pt-[80px]"
+      className="
+        relative
+        min-h-[700px]
+        sm:min-h-[800px]
+        lg:min-h-[calc(100vh-80px)]
+        overflow-hidden
+        bg-ink
+        pt-[80px]
+      "
     >
+      {/* Background Image */}
       <div className="absolute inset-0">
         <AssetImage
           src={assets.hero.main}
@@ -23,8 +39,10 @@ export function HeroSection() {
         />
       </div>
 
+      {/* Dark Overlay */}
       <div className="absolute inset-0 hero-overlay"></div>
 
+      {/* Content Container */}
       <div
         className="
           relative
@@ -32,10 +50,19 @@ export function HeroSection() {
           flex
           min-h-[calc(100vh-80px)]
           max-w-7xl
+
           items-center
-          justify-center
+
+          justify-start
+          lg:justify-center
+
           px-6
+
+          pt-8
+          lg:pt-0
+
           py-24
+
           sm:px-8
           lg:px-10
         "
@@ -43,19 +70,34 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: 'easeOut' }}
+          transition={{
+            duration: 0.9,
+            ease: "easeOut",
+          }}
           className="
             max-w-4xl
-            space-y-10
+
+            space-y-6
+            sm:space-y-10
+
             text-center
           "
         >
-          <div className="space-y-6">
+          {/* Text Block */}
+          <div
+            className="
+              space-y-4
+              sm:space-y-6
+            "
+          >
             <p
               className="
-                text-sm
+                text-xs
+                sm:text-sm
+
                 uppercase
-                tracking-[0.40em]
+                tracking-[0.35em]
+
                 text-frost/80
               "
             >
@@ -65,38 +107,52 @@ export function HeroSection() {
             <h1
               className="
                 font-serif
-                text-[clamp(3.5rem,7vw,7rem)]
+
+                text-[clamp(2.4rem,10vw,7rem)]
+
                 leading-[0.95]
+
                 tracking-[-0.03em]
+
                 text-alabaster
               "
             >
               Every Detail,
-              <span className="block">Elevated.</span>
+              <span className="block">
+                Elevated.
+              </span>
             </h1>
 
             <p
               className="
                 mx-auto
                 max-w-2xl
-                text-lg
-                leading-8
+
+                text-base
+                leading-7
+
                 text-frost/90
-                sm:text-xl
+
+                sm:text-lg
+                lg:text-xl
               "
             >
-                Luxury garment accessories engineered
-                <br />
-                for modern fashion brands.
+              Luxury garment accessories engineered
+              <br />
+              for modern fashion brands.
             </p>
           </div>
 
+          {/* CTA Buttons */}
           <div
             className="
               flex
               flex-wrap
+
               justify-center
-              gap-4
+
+              gap-3
+              sm:gap-4
             "
           >
             <a
@@ -105,20 +161,39 @@ export function HeroSection() {
                 inline-flex
                 items-center
                 justify-center
+
                 rounded-full
+
                 bg-primary
-                px-8
-                py-4
-                text-sm
+
+                px-5
+                py-3
+
+                text-[0.7rem]
+
                 uppercase
                 tracking-[0.18em]
+
                 text-black
+
                 transition
+
                 hover:bg-[#cfb868]
+
+                sm:px-8
+                sm:py-4
+                sm:text-sm
               "
             >
               Request Samples
-              <ArrowRight className="ml-3 h-4 w-4" />
+
+              <ArrowRight
+                className="
+                  ml-2
+                  h-4
+                  w-4
+                "
+              />
             </a>
 
             <a
@@ -127,19 +202,32 @@ export function HeroSection() {
                 inline-flex
                 items-center
                 justify-center
+
                 rounded-full
+
                 border
                 border-gunmetal
+
                 bg-transparent
-                px-8
-                py-4
-                text-sm
+
+                px-5
+                py-3
+
+                text-[0.7rem]
+
                 uppercase
                 tracking-[0.18em]
+
                 text-alabaster
+
                 transition
+
                 hover:border-primary
                 hover:text-primary
+
+                sm:px-8
+                sm:py-4
+                sm:text-sm
               "
             >
               Start A Project
