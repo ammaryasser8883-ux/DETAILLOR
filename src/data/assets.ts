@@ -21,7 +21,7 @@ export const assets = {
     engineeredMold: '/images/manufacturing/engineered-mold.png',
   },
   zippers: {
-    background: '/images/zippers/Zippers.png',
+    background: '/images/Zippers/Zippers.png',
   },
   wovenLabels: {
     background : '/images/woven-labels/woven-labels-background.png',
@@ -33,7 +33,7 @@ export const assets = {
     background: '/images/packaging/packaging-background.png',
   },
   categories: {
-    zippers: '/images/zippers/Zippers.png',
+    zippers: '/images/Zippers/Zippers.png',
     hangTags: '/images/hang-tags/hang-tags-background.png',
     packaging: '/images/packaging/packaging-background.png',
     wovenLabels: '/images/woven-labels/woven-labels-background.png',
