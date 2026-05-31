@@ -32,7 +32,7 @@ export function SiteHeader() {
           className="flex items-center gap-4"
         >
           <Image
-            src="/logo.png"
+            src="/Logo.png"
             alt="DETAILLOR Logo"
             width={52}
             height={52}

@@ -20,7 +20,7 @@ export const assets = {
     engineeredMold: '/images/manufacturing/engineered-mold.png',
   },
   zippers: {
-    background: '/images/zippers/zippers.png',
+    background: '/images/zippers/Zippers.png',
   },
   wovenLabels: {
     background : '/images/woven-labels/woven-labels-background.png',
