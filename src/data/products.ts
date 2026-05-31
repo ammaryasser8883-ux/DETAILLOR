@@ -10,7 +10,7 @@ export const categories: Category[] = [
     tag: 'Coming Soon',
   },
   {
-    id: 'hang-tags',
+    id: 'hangTags',
     title: 'Hang Tags',
     description: 'Luxury brand identity elements coming soon.',
     image: assets.categories?.hangTags ?? '',
@@ -24,7 +24,7 @@ export const categories: Category[] = [
     tag: 'Coming Soon',
   },
   {
-    id: 'woven-labels',
+    id: 'wovenLabels',
     title: 'Woven Labels',
     description: 'Identity woven systems coming soon.',
     image: assets.wovenLabels?.background ?? '',

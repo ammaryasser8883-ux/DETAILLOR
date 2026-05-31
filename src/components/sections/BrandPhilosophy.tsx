@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export function BrandPhilosophy() {
   return (
-    <section className="border-t border-gunmetal bg-charcoal py-24">
+    <section id="about" className="border-t border-gunmetal bg-charcoal py-24">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

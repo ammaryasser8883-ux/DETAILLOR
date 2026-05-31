@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 
 export function ProductCategories() {
   return (
-    <section id="buttons" className="border-t border-gunmetal bg-ink py-24">
+    <section id="products" className="border-t border-gunmetal bg-ink py-24">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="mb-14 max-w-3xl space-y-6 text-center">
-          <p className="text-sm uppercase tracking-[0.32em] text-frost/80">Buttons</p>
+          {/* <p className="text-sm uppercase tracking-[0.32em] text-frost/80">Buttons</p> */}
           <h2 className="font-serif text-4xl uppercase tracking-[0.12em] text-alabaster sm:text-5xl">
             Our current specialization and expertise.
           </h2>

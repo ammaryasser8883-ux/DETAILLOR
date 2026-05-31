@@ -6,7 +6,7 @@ import { manufacturingImages } from '@/data/products';
 
 export function ManufacturingPrecision() {
   return (
-    <section className="border-t border-gunmetal bg-charcoal py-24">
+    <section id="manufacturing" className="border-t border-gunmetal bg-charcoal py-24">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="mb-14 max-w-3xl space-y-4 text-center">
           <p className="text-sm uppercase tracking-[0.32em] text-frost/80">Manufacturing</p>
