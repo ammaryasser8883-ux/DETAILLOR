@@ -57,8 +57,8 @@ export function SiteHeader() {
             <Image
               src="/Logo.png"
               alt="DETAILLOR Logo"
-              width={40}
-              height={40}
+              width={52}
+              height={52}
               priority
               className="
                 h-8
