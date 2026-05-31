@@ -1,6 +1,7 @@
 export const assets = {
   hero: {
     main: '/images/hero/hero-background.png',
+    mobile: '/images/hero/Hero_Mobile.png',
   },
   buttons: {
     showcase1: '/images/buttons/showcase-button-1.png',

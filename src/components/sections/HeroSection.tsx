@@ -18,7 +18,7 @@ export function HeroSection() {
       id="hero"
       className="
         relative
-        min-h-[700px]
+        min-h-[650px]
         sm:min-h-[800px]
         lg:min-h-[calc(100vh-80px)]
         overflow-hidden
@@ -26,21 +26,37 @@ export function HeroSection() {
         pt-[80px]
       "
     >
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <AssetImage
-          src={assets.hero.main}
-          alt="DETAILLOR hero background"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-          debugLabel="hero-background"
-        />
-      </div>
+      {/* Background Images */}
+	    <div className="absolute inset-0 overflow-hidden">
+	      {/* Mobile Hero Image */}
+	      <div className="block md:hidden absolute inset-0">
+	  	    <AssetImage
+	  	      src={assets.hero.mobile}
+	  	      alt="DETAILLOR mobile hero background"
+	  	      fill
+	  	      priority
+	  	      sizes="100vw"
+	  	      debugLabel="hero-mobile-background"
+	  	      className="object-cover"
+	  	    />
+	      </div>
+	  
+	      {/* Desktop / Tablet Hero Image */}
+	      <div className="hidden md:block absolute inset-0">
+	  	    <AssetImage
+	  	      src={assets.hero.main}
+	  	      alt="DETAILLOR hero background"
+	  	      fill
+	  	      priority
+	  	      sizes="100vw"
+	  	      debugLabel="hero-desktop-background"
+	  	      className="object-cover"
+	  	    />
+	      </div>
+	    </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 hero-overlay"></div>
+      <div className="absolute inset-0 hero-overlay" />
 
       {/* Content Container */}
       <div
@@ -56,15 +72,16 @@ export function HeroSection() {
           justify-start
           lg:justify-center
 
-          px-6
-
-          pt-8
-          lg:pt-0
-
-          py-24
-
+          px-5
           sm:px-8
           lg:px-10
+
+          pt-2
+          lg:pt-0
+
+          py-12
+          sm:py-20
+          lg:py-24
         "
       >
         <motion.div
@@ -75,9 +92,10 @@ export function HeroSection() {
             ease: "easeOut",
           }}
           className="
+            mx-auto
             max-w-4xl
 
-            space-y-6
+            space-y-5
             sm:space-y-10
 
             text-center
@@ -86,17 +104,19 @@ export function HeroSection() {
           {/* Text Block */}
           <div
             className="
-              space-y-4
+              space-y-3
               sm:space-y-6
             "
           >
             <p
               className="
-                text-xs
+                text-[0.65rem]
                 sm:text-sm
 
                 uppercase
-                tracking-[0.35em]
+
+                tracking-[0.28em]
+                sm:tracking-[0.35em]
 
                 text-frost/80
               "
@@ -108,7 +128,9 @@ export function HeroSection() {
               className="
                 font-serif
 
-                text-[clamp(2.4rem,10vw,7rem)]
+                text-[2.8rem]
+                sm:text-[4rem]
+                lg:text-[7rem]
 
                 leading-[0.95]
 
@@ -126,14 +148,17 @@ export function HeroSection() {
             <p
               className="
                 mx-auto
-                max-w-2xl
+                max-w-xl
 
-                text-base
-                leading-7
+                text-sm
+                leading-6
 
                 text-frost/90
 
-                sm:text-lg
+                sm:max-w-2xl
+                sm:text-base
+                sm:leading-7
+
                 lg:text-xl
               "
             >
@@ -152,7 +177,6 @@ export function HeroSection() {
               justify-center
 
               gap-3
-              sm:gap-4
             "
           >
             <a
@@ -166,13 +190,13 @@ export function HeroSection() {
 
                 bg-primary
 
-                px-5
-                py-3
+                px-4
+                py-2.5
 
-                text-[0.7rem]
+                text-[0.6rem]
 
                 uppercase
-                tracking-[0.18em]
+                tracking-[0.15em]
 
                 text-black
 
@@ -180,9 +204,13 @@ export function HeroSection() {
 
                 hover:bg-[#cfb868]
 
-                sm:px-8
-                sm:py-4
-                sm:text-sm
+                sm:px-6
+                sm:py-3
+                sm:text-[0.7rem]
+
+                lg:px-8
+                lg:py-4
+                lg:text-sm
               "
             >
               Request Samples
@@ -210,13 +238,13 @@ export function HeroSection() {
 
                 bg-transparent
 
-                px-5
-                py-3
+                px-4
+                py-2.5
 
-                text-[0.7rem]
+                text-[0.6rem]
 
                 uppercase
-                tracking-[0.18em]
+                tracking-[0.15em]
 
                 text-alabaster
 
@@ -225,9 +253,13 @@ export function HeroSection() {
                 hover:border-primary
                 hover:text-primary
 
-                sm:px-8
-                sm:py-4
-                sm:text-sm
+                sm:px-6
+                sm:py-3
+                sm:text-[0.7rem]
+
+                lg:px-8
+                lg:py-4
+                lg:text-sm
               "
             >
               Start A Project
